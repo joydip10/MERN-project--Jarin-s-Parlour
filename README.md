@@ -1,5 +1,5 @@
 # MERN Project- Jarins Parlour
-## Livesite link- https://get-your-doctors-portal.netlify.app
+## Livesite link- https://jarins-parlour.netlify.app/
 
 ### Used Technologies
 - React
@@ -16,6 +16,7 @@
 - Make Admin Facility by the admin
 - Context API
 - REST API
+- React Hook Form
 - Payment Gateway with Stripe
 - Firebase Authentication
 - JWT token
