@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, GoogleAuthProvider, signInWithPopup, updateProfile, getIdToken, signOut } from "firebase/auth";
-import firebaseInitialize from './../Login/Firebase/Firebase.Initialize';
+
+import firebaseInitialize from '../../Firebase/Firebase.Initialize';
 
 
 // initialize firebase app
@@ -64,6 +65,7 @@ const useFirebase = () => {
                 const destination = location?.state?.from || '/';
                 navigate(destination);
             }).catch((error) => {
+                console.log(error);
                 setAuthError(error.message);
             }).finally(() => setIsLoading(false));
     }

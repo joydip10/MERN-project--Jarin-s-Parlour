@@ -27,9 +27,9 @@ const Login = () => {
                                     </div>
                                     <br />
                                     <h3>Please<span style={{ color: 'hotpink' }}> Login</span></h3>
-                                    <input placeholder="Input Email" {...register("email", { required: true })} />
+                                    <input type="email" placeholder="Input Email" {...register("email", { required: true })} />
                                     <br />
-                                    <input placeholder="Input Password" {...register("password", { required: true })} />
+                                    <input type="password" placeholder="Input Password" {...register("password", { required: true })} />
                                     <br />
                                     <input type="submit" />
                                 </form>
