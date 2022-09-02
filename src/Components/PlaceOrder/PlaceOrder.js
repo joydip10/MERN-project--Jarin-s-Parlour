@@ -7,11 +7,15 @@ import Typography from '@mui/material/Typography';
 import Navigation from '../Shared/Navigation/Navigation';
 import { useForm } from "react-hook-form";
 import UseAuth from './../Hooks/UseAuth';
+import {useNavigate} from 'react-router-dom';
+
 const PlaceOrder = () => {
     const { id } = useParams();
     const [product, setProduct] = useState({});
     const { register, handleSubmit, reset } = useForm();
     const {user}=UseAuth();
+
+    const navigate=useNavigate();
 
     useEffect(() => {
         fetch(`https://murmuring-reaches-90581.herokuapp.com/products/${id}`)
@@ -35,6 +39,7 @@ const PlaceOrder = () => {
             if(data.insertedId){
                 alert('Order has been successfully placed');
                 reset();
+                navigate('/dashboard/myProducts');
             }
         })
     };
